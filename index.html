@@ -39,6 +39,20 @@
       padding: 2rem 1rem;
       border-radius: 0.5rem;
     }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .header-content {
+      align-items: center;
+      gap: 1rem;
+    }
+    .header-image {
+      max-width: 400px;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 0.25rem;
+    }
     details {
       background: #ffffff;
       border: 1px solid #ccc;
@@ -56,21 +70,24 @@
 </head>
 <body>
   <header>
-    <h1>Mines PECS Quadcopter</h1>
-    <p>Welcome to our quadcopter project documentation!</p>
+    <div class="header-content">
+      <h1>Mines PeCS Quadcopter Documentation</h1>
+      <img src="images/DronePhoto.jpg" alt="Drone Photo" class="header-image">
+    </div>
   </header>
   <main>
+    <details>
+      <summary>Project Overview</summary>
+      <p>TODO</p>
+    </details>
+    
     <details open>
       <summary>UAV Assembly</summary>
       <p>Let's build a drone!</p>
       <div class="note">
         <strong>Note:</strong> This project is under active development.
       </div>
-
-      <h2>Overview of Process & Materials</h2>
-      <p>TODO: Expand on how to make the drone. If one has access to a 3d printer you can 3d print components or outsource to companies like Xometry or SendCutSend. All files are available.</p>
-      <p>The following page assumes you have all of the required materials. If you haven't bought & manufactured all of the base, go back to TODO: Link page with BOM and instructions for 3d printing and manufacturing.</p>
-
+      
       <h3>Materials Needed:</h3>
       <ol>
         <li>Carbon Fiber Base Plate<ul><li>Water jet or order</li></ul></li>
@@ -165,6 +182,26 @@
 
       <h2>Conclusion</h2>
       <p>Now that you have a working drone continue to the First Flight page for information on getting it in the air.</p>
+    </details>
+
+    <details>
+      <summary>First Flight TODO</summary>
+      <p> TODO: Add instructions for initial calibration, takeoff procedures for first flight</p>
+    </details>
+
+    <details>
+      <summary>Bill of Materials TODO</summary>
+      <p>TODO</p>
+    </details>
+
+    <details>
+      <summary>Contact Information</summary>
+      <p>TODO</p>
+    </details>
+
+    <details>
+      <summary>File Download</summary>
+      <p>TODO</p>
     </details>
   </main>
 </body>
