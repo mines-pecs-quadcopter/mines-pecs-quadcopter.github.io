@@ -1,21 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mines PECS Quadcopter</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 2rem;
-      background-color: #f4f4f4;
-      color: #333;
+      background-color: #f8f9fa;
+      color: #212529;
+    }
+    h1, h2, h3, h4 {
+      color: #00529B;
+    }
+    pre {
+      background-color: #e9ecef;
+      padding: 1em;
+      border-radius: 0.25em;
+      overflow-x: auto;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 1rem 0;
+      border: 1px solid #ccc;
+      border-radius: 0.25rem;
+    }
+    .note {
+      background-color: #fff3cd;
+      padding: 1em;
+      border-left: 5px solid #ffeeba;
+      margin: 1em 0;
     }
     header {
+      background-color: #dceeff;
       text-align: center;
-      margin-bottom: 2rem;
+      padding: 2rem 1rem;
+      border-radius: 0.5rem;
     }
-    h1 {
+    details {
+      background: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+    summary {
+      font-size: 1.25rem;
+      font-weight: bold;
+      cursor: pointer;
       color: #00529B;
     }
   </style>
@@ -23,10 +57,115 @@
 <body>
   <header>
     <h1>Mines PECS Quadcopter</h1>
-    <p>Welcome to our quadcopter project site!</p>
+    <p>Welcome to our quadcopter project documentation!</p>
   </header>
   <main>
-    <p>This is a placeholder for the Mines PECS Quadcopter project. More details will be added soon.</p>
+    <details open>
+      <summary>UAV Assembly</summary>
+      <p>Let's build a drone!</p>
+      <div class="note">
+        <strong>Note:</strong> This project is under active development.
+      </div>
+
+      <h2>Overview of Process & Materials</h2>
+      <p>TODO: Expand on how to make the drone. If one has access to a 3d printer you can 3d print components or outsource to companies like Xometry or SendCutSend. All files are available.</p>
+      <p>The following page assumes you have all of the required materials. If you haven't bought & manufactured all of the base, go back to TODO: Link page with BOM and instructions for 3d printing and manufacturing.</p>
+
+      <h3>Materials Needed:</h3>
+      <ol>
+        <li>Carbon Fiber Base Plate<ul><li>Water jet or order</li></ul></li>
+        <li>PCB<ul><li>Solder Components</li><li>Verify</li></ul></li>
+        <li>Arms<ul><li>Print Motor Mounts</li><li>Print Arm Nodes</li><li>Print Mold - 1% scale</li><li>Cut Tubes to length</li><li>Insert Threaded Inserts</li><li>Glue together</li></ul></li>
+        <li>Landing Legs<ul><li>Print Leg Mounts</li><li>Print Leg Joint</li><li>Cut tubes to length</li><li>Drill holes in tubes</li><li>Bolt Together</li></ul></li>
+      </ol>
+
+      <details>
+        <summary>Creating the Carbon Fiber Arms</summary>
+        <p>Before gluing, clear your work table. Use either a silicon mat or lay paper towels across your work table as you don't want to get JB weld everywhere. You also want a pair of gloves, a cup to mix the JB weld in and a stirring stick.</p>
+        <p>After that grab your carbon rods, arm mounts, motor mounts and molds. Below is a picture of all those components.</p>
+        <img src="images/ArmPrepMaterials.jpg" alt="Prep materials for arm gluing" width="400">
+        <p>First wrap each of your carbon rods with painters tape in the middle leaving a section that can be used to pull the arm out of the mold once cured. Below shows rods taped:</p>
+        <img src="images/TapedCarbonRods.jpg" alt="Taped Carbon Rods" width="300">
+
+        <p>Next you'll glue the arms together. Note: the JB weld only has 10 minutes of good working time so if you're doing this by yourself only do two arms at a time to give yourself plenty of time. Now open the JB weld, push out about two quarter size blobs into your container. Stir the two parts of the JB thoroughly; after mixing use your stir stick to coat the inside of the motor mount with JB. Then coat the inside & outside of the carbon rod. After both the mount and rod have a thin coating, slowly insert the rod while spinning it. Make sure there is always a thin ring of JB weld around the rod. If there isn't, you need more JB. Use a paper towel to remove any excess JB. Repeat the process for the arm mount. Note: the motor mount takes more glue than the arm mount. After both sides have been glued rotate the pieces so the tape aligns with the top of the motor & arm mount. Slowly insert the glued assembly into the mold. Push firmly to ensure the mounts lay flat within the mold. Repeat the process for the other 3 arms.</p>
+        <div class="note">
+          <strong>Note:</strong> Don't use too much glue without wiping it away before putting it in the mold or the arm will glue itself to the mold.
+        </div>
+        <img src="images/GluedArmsinMold.jpg" alt="Glued Arms in Molds" width="400">
+
+        <p>After waiting 24 hours for a full cure before removing the arms from the molds. To remove the arms use the tape to pull the arms out or insert two rods into the holes in the bottom of the mold while pressing against the mold to pop the arm out of the mold.</p>
+
+        <h3>Heat Set Inserts</h3>
+        <p>Before getting started, go over the following resources on how to use thermoplastic heat set inserts.</p>
+        <p>As shown in the video a jig for the iron helps create a better product. You can follow the instructions to make one from <a href="https://learn.adafruit.com/heat-set-rig?view=all">Adafruit</a>.</p>
+        <p>Using a soldering iron melt the thermoplastic inserts into the arm mounts. If you aren't using the insert press ensure that the inserts are straight; a good way of checking is to use a screw to spot the normality of the bolt. The plastic will still be warm enough for fine adjustments. Once all the inserts have been added the arms are now complete and should look like the following:</p>
+        <img src="images/ArmInserts.jpg" alt="Thermoplastic inserts added to arm mounts" width="400">
+      </details>
+
+      <details>
+        <summary>Assemble Lower Frame</summary>
+        <p>First mount the Orange Cube to the carbon fiber base plate with the provided screws. The arrow on the cube should face towards the two additional holes in the base plate. Next you'll also need the glued arms, the landing leg mounts and the M3 bolts. Below is an image of all those items:</p>
+        <img src="images/LowerFrameMaterials.jpg" alt="Lower Frame Materials" width="400">
+        <p>Next is to mount the arms and leg mounts to the carbon fiber plate. Each corner requires 3 bolts, repeat.</p>
+        <img src="images/MountedArm.jpg" alt="Mounted Arm" width="400">
+      </details>
+
+      <details>
+        <summary>Assemble Landing Legs TODO</summary>
+        <p>TODO</p>
+      </details>
+
+      <details>
+        <summary>Cutting Motor Leads & Mounting Motors TODO</summary>
+        <p>TODO</p>
+      </details>
+
+      <details>
+        <summary>PCB & Electronics</summary>
+        <h3>Required Materials</h3>
+        <ul>
+          <li>1 - Custom PCB Drone Frame</li>
+          <li>1 - 0.001 Ohm Current Sense Resistor(SMD)</li>
+          <li>1 - 0402 2 kOhm SMD Resistor(SMD)</li>
+          <li>1 - 0402 8 kOhm SMD Resistor(SMD)</li>
+          <li>1 - 0805 47 kOhm SMD Resistor(SMD)</li>
+          <li>1 - IN9 Voltage to Current Amplifier(SMD)</li>
+          <li>1 - JST-GH Connector</li>
+          <li>4 - KDEDirect KDEXF-UAS35 ESC</li>
+          <li>1 - KDEDirect KDEXF-UBEC22 Battery Eliminator Circuit</li>
+          <li>1 - EC5 Male Battery Connector</li>
+          <li>Solder Iron, Solder Paste, Solder Wire, Other Soldering Accessories as Needed</li>
+          <li>Tweezers</li>
+        </ul>
+        <img src="images/BlurryBlank.jpg" alt="The Blank Board" width="300">
+        <img src="images/SolderOnBoard.jpg" alt="Solder paste on board" width="300">
+        <img src="images/FinishedSMD.jpg" alt="Completed SMD Soldering" width="300">
+        <img src="images/InProgressThruHole.jpg" alt="In-progress through-hole soldering" width="300">
+        <img src="images/CompletedThruHole.jpg" alt="Completed through-hole board" width="300">
+      </details>
+
+      <details>
+        <summary>Final Assembly</summary>
+        <h3>Required Materials</h3>
+        <ul>
+          <li>Cube Orange</li>
+          <li>4 - Motors</li>
+          <li>4 - Completed Arm Assemblies</li>
+          <li>Telemetry Radio</li>
+          <li>Receiver</li>
+          <li>Completed PCB with soldered ESCs</li>
+          <li>Velcro</li>
+          <li>Zip Ties</li>
+          <li>Special Wire</li>
+          <li>GPS Module</li>
+          <li>Legs</li>
+        </ul>
+        <p>TODO</p>
+      </details>
+
+      <h2>Conclusion</h2>
+      <p>Now that you have a working drone continue to the First Flight page for information on getting it in the air.</p>
+    </details>
   </main>
 </body>
 </html>
