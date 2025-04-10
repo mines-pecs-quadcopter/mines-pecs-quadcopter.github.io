@@ -80,7 +80,7 @@
       <summary>Project Overview</summary>
       <p>TODO</p>
     </details>
-    
+
     <details open>
       <summary>UAV Assembly</summary>
       <p>Let's build a drone!</p>
@@ -128,13 +128,18 @@
       </details>
 
       <details>
-        <summary>Assemble Landing Legs TODO</summary>
-        <p>TODO</p>
+        <summary>Assemble Landing Legs </summary>
+        <p>There are six carbon fiber rods used for the landing legs. There are 4 10mm rods that extrude 6" from the body, these are referred to as the 'legs'. There two 8mm rods, about 14", that connect the bottoms of the 'legs' together, these will be referred to as the 'feet'<p>
+        <p>Using the JB Weld, glue the 4 legs into the body of the drone. Alternatively, you can drill a small hole through the carbon fiber rod, using a screw and nut to hold the assembly together instead of glue. This is more difficult to manufacture, but easier to repair in the event of a crash.</p>
+        <img src="images/BodyLegJoint.jpg" alt="Body Leg Joint" width="400">
+        <p> Now we will attach the feet. Using the 3D printed joint, slide the joint first into the leg and then slide the leg through the joint. This is held in by friction.</p>
+        <img src="images/LegJoint.jpg" alt="Leg Joint" width="400">
       </details>
 
       <details>
-        <summary>Cutting Motor Leads & Mounting Motors TODO</summary>
+        <summary>Cutting Motor Leads & Mounting Motors </summary>
         <p>TODO</p>
+        <img src="images/MotorMounted.jpg" alt="Mounted Motor" width="400">
       </details>
 
       <details>
@@ -191,7 +196,63 @@
 
     <details>
       <summary>Bill of Materials TODO</summary>
-      <p>TODO</p>
+      <style>
+        table.bom-table {
+          width: 100%;
+          border-collapse: collapse;
+          margin: 1rem 0;
+        }
+        table.bom-table th, table.bom-table td {
+          border: 1px solid #ccc;
+          padding: 0.75rem;
+          text-align: left;
+        }
+        table.bom-table tbody tr:nth-child(even) {
+          background-color: #f2f2f2;
+        }
+        table.bom-table caption {
+          font-weight: bold;
+          margin-bottom: 0.5rem;
+          caption-side: top;
+        }
+      </style>
+      
+      <table class="bom-table">
+        <caption>Bill of Materials</caption>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Total Price</th>
+            <th>Distributor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>CubePilot Orange</td><td>1</td><td>$350</td><td>Amazon</td></tr>
+          <tr><td>KDE2814XF-775 Motor</td><td>4</td><td>$380</td><td>KDE</td></tr>
+          <tr><td>NEO 3 Pro GPS</td><td>1</td><td>$168</td><td>RC-Wing</td></tr>
+          <tr><td>KDEXF-UAS35 ESC</td><td>4</td><td>$244</td><td>KDE</td></tr>
+          <tr><td>KDEXF-UBEC22 Battery Eliminator</td><td>1</td><td>$62</td><td>KDE</td></tr>
+          <tr><td>10000 mAh HV LiPo</td><td>1</td><td>$150</td><td>GensTattu</td></tr>
+          <tr><td>12x4.5 Propeller Set of 2</td><td>2</td><td>$20</td><td>Master Airscrew</td></tr>
+          <tr><td>10x8x420mm Carbon Fiber Tubes</td><td>1</td><td>$22</td><td>Amazon</td></tr>
+          <tr><td>8x6x350mm Carbon Fiber Tubes</td><td>1</td><td>$19</td><td>Amazon</td></tr>
+          <tr><td>Raspberry Pi 4</td><td>1</td><td>$45</td><td>Canakit</td></tr>
+          <tr><td>Custom PCB</td><td>1</td><td>$10</td><td>Custom</td></tr>
+          <tr><td>0.001 Ohm Current Sense Resistor</td><td>2</td><td>$0.32</td><td>Mouser</td></tr>
+          <tr><td>2 kOhm Resistor</td><td>1</td><td>$0.10</td><td>Mouser</td></tr>
+          <tr><td>8 kOhm Resistor</td><td>1</td><td>$0.10</td><td>Mouser</td></tr>
+          <tr><td>47 kOhm Resistor</td><td>1</td><td>$0.10</td><td>Mouser</td></tr>
+          <tr><td>JST-GH Connector</td><td>1</td><td>$0.10</td><td>Digikey</td></tr>
+          <tr><td>IN9 Voltage to Current Amplifier</td><td>1</td><td>$0.10</td><td>Mouser</td></tr>
+          <tr><td>Remote ID</td><td>1</td><td>$39</td><td>GetFPV</td></tr>
+          <tr><td>Custom Base Plate</td><td>1</td><td>$10</td><td>Custom</td></tr>
+          <tr><td>M3 Heat Set Inserts</td><td>24</td><td>$5</td><td>McMaster Carr</td></tr>
+          <tr><td>M3 Screw Assortment Kit</td><td>1</td><td>$15</td><td>Amazon</td></tr>
+          <tr><td>JB Weld Plastic</td><td>1</td><td>$7</td><td>Amazon</td></tr>
+        </tbody>
+      </table>
+      
     </details>
 
     <details>
