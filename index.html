@@ -79,22 +79,16 @@
     <details>
       <summary>Project Overview</summary>
       <p>TODO</p>
+      <video width="100%" controls>
+        <source src="videos/ShortVideo.mp4" type="video/quicktime">
+        Your browser does not support the video tag. You can <a href="videos/flight_demo.mov">download the video here</a>.
+      </video>      
     </details>
 
     <details open>
       <summary>UAV Assembly</summary>
       <p>Let's build a drone!</p>
-      <div class="note">
-        <strong>Note:</strong> This project is under active development.
-      </div>
-      
-      <h3>Materials Needed:</h3>
-      <ol>
-        <li>Carbon Fiber Base Plate<ul><li>Water jet or order</li></ul></li>
-        <li>PCB<ul><li>Solder Components</li><li>Verify</li></ul></li>
-        <li>Arms<ul><li>Print Motor Mounts</li><li>Print Arm Nodes</li><li>Print Mold - 1% scale</li><li>Cut Tubes to length</li><li>Insert Threaded Inserts</li><li>Glue together</li></ul></li>
-        <li>Landing Legs<ul><li>Print Leg Mounts</li><li>Print Leg Joint</li><li>Cut tubes to length</li><li>Drill holes in tubes</li><li>Bolt Together</li></ul></li>
-      </ol>
+      <p>Before we begin, please check out the Bill of Materials page to ensure you have all required components.</p>
 
       <details>
         <summary>Creating the Carbon Fiber Arms</summary>
@@ -138,32 +132,85 @@
 
       <details>
         <summary>Cutting Motor Leads & Mounting Motors </summary>
-        <p>TODO</p>
+        <p>We will now mount the four motors to the ends of the arms.</p>
+        <p>If you have a soldering iron handy, you can shorten the wire leads that will be plugged into the ESC. This step is optional, as a zip tie can hold down the extra wire.</p>
+        <p>Then we will use the provided screws to attach the motors. Ensure that you screw into the proper hole that is the same diameter as the holes on the motor mount.</p>
         <img src="images/MotorMounted.jpg" alt="Mounted Motor" width="400">
       </details>
 
       <details>
         <summary>PCB & Electronics</summary>
         <h3>Required Materials</h3>
-        <ul>
-          <li>1 - Custom PCB Drone Frame</li>
-          <li>1 - 0.001 Ohm Current Sense Resistor(SMD)</li>
-          <li>1 - 0402 2 kOhm SMD Resistor(SMD)</li>
-          <li>1 - 0402 8 kOhm SMD Resistor(SMD)</li>
-          <li>1 - 0805 47 kOhm SMD Resistor(SMD)</li>
-          <li>1 - IN9 Voltage to Current Amplifier(SMD)</li>
-          <li>1 - JST-GH Connector</li>
-          <li>4 - KDEDirect KDEXF-UAS35 ESC</li>
-          <li>1 - KDEDirect KDEXF-UBEC22 Battery Eliminator Circuit</li>
-          <li>1 - EC5 Male Battery Connector</li>
-          <li>Solder Iron, Solder Paste, Solder Wire, Other Soldering Accessories as Needed</li>
-          <li>Tweezers</li>
-        </ul>
-        <img src="images/BlurryBlank.jpg" alt="The Blank Board" width="300">
-        <img src="images/SolderOnBoard.jpg" alt="Solder paste on board" width="300">
-        <img src="images/FinishedSMD.jpg" alt="Completed SMD Soldering" width="300">
-        <img src="images/InProgressThruHole.jpg" alt="In-progress through-hole soldering" width="300">
-        <img src="images/CompletedThruHole.jpg" alt="Completed through-hole board" width="300">
+        <h2>PCB & Electronics</h2>
+
+<h3>Required Materials</h3>
+<ul>
+  <li>1 - Custom PCB Drone Frame</li>
+  <li>1 - 0.001 Ohm Current Sense Resistor (SMD)</li>
+  <li>1 - 0402 2 kOhm SMD Resistor</li>
+  <li>1 - 0402 8 kOhm SMD Resistor</li>
+  <li>1 - 0805 47 kOhm SMD Resistor</li>
+  <li>1 - IN9 Voltage to Current Amplifier (SMD)</li>
+  <li>1 - JST-GH Connector</li>
+  <li>4 - KDEDirect KDEXF-UAS35 ESC</li>
+  <li>1 - KDEDirect KDEXF-UBEC22 Battery Eliminator Circuit</li>
+  <li>1 - EC5 Male Battery Connector</li>
+  <li>Solder Iron, Solder Paste, Solder Wire, Other Soldering Accessories as Needed</li>
+  <li>Tweezers</li>
+</ul>
+
+<h3>The Board Before Beginning</h3>
+<img src="images/BlurryBlank.jpg" alt="The Blank Board" width="300">
+
+
+<h3>Surface Mount Soldering</h3>
+<p>Begin with a clear workspace. Using solder paste with the narrowest needle available, apply the paste to the SMD pads. For larger pads, that’s all you need. For very small and closely spaced pads, continue:</p>
+<ul>
+  <li>Use tweezers to spread solder evenly across the pads.</li>
+  <li>Remove any excess paste to create a thin, even layer.</li>
+  <li>To eliminate solder bridges, carefully scrape between pads with tweezers.</li>
+</ul>
+<img src="images/SolderOnBoard.jpg" alt="Solder paste on board" width="300">
+
+<p><em>Solder paste on the board before devices are placed — it may not look pretty, but there should be no bridges.</em></p>
+
+<h3>Placing SMD Devices</h3>
+<p>Start placing the SMD devices. A Pick and Place machine helps, but is not required. Match device pads to board pads.</p>
+<ul>
+  <li>The 8kΩ resistor should be closer to the largest current sense resistors.</li>
+  <li>The 2kΩ resistor should be nearer the center of the board.</li>
+</ul>
+
+<img src="images/FinishedSMD.jpg" alt="Completed SMD Soldering" width="300">
+
+<p>Once all devices are placed, use a reflow oven or heat gun to cure the solder.</p>
+
+<h3>Post-Solder Testing</h3>
+<ul>
+  <li>Use a multimeter to ensure no shorts between terminals of each resistor and capacitor.</li>
+  <li>Inspect IC pins for solder bridges.</li>
+</ul>
+<p>Only proceed once the board is verified to be correct.</p>
+
+<h3>Through-Hole Soldering</h3>
+<ol>
+  <li>Solder the four KDEDirect KDEXF-UAS35 ESCs to the board corners (wires should exit opposite the SMD side).</li>
+  <li>Ensure the red wire connects to the positive terminal.</li>
+  <li>Solder the KDEDirect KDEXF-UBEC22 Battery Eliminator Circuit to the left middle terminals.</li>
+  <li>Insert the JST-GH Connector into the large terminals near the SMD area.</li>
+</ol>
+<img src="images/InProgressThruHole.jpg" alt="In-progress through-hole soldering" width="300">
+<p><em>Photo: Through-hole soldering in progress with 1 ESC and battery connector in place.</em></p>
+<img src="images/CompletedThruHole.jpg" alt="Completed through-hole board" width="300">
+<p><em>Photo: Completed through-hole board with the battery eliminator circuit on the left.</em></p>
+
+<h3>Soldering Tips</h3>
+<ul>
+  <li>Use as little solder as possible during SMD placement — it’s easier to try again than to fix bridges.</li>
+  <li>Increase iron heat for thicker wires (through-hole parts).</li>
+  <li>Take your time — careful soldering takes patience.</li>
+</ul>
+
       </details>
 
       <details>
@@ -182,20 +229,32 @@
           <li>GPS Module</li>
           <li>Legs</li>
         </ul>
-        <p>TODO</p>
+        <h3>GPS and Cube Mounting</h3>
+        <p>Using the pre-existing holes in the carbon fiber base plate, use 4 M3 screws to mount the Cube Orange Assembly to the baseplate. Then use the provided screws to mount the GPS to the PDB.</p>
+        <h3>Electrical Connections to be Made</h3>
+        <ul>
+          <li>Each motor to its respective ESC</li>
+          <li>Each ESC to its proper input port on the Cube Orange</li>
+          <li>The Cube Orange to the power distribution board</li>
+          <li>The battery eliminator circuit to the Cube Orange</li>
+          <li>The RC Radio and Telem Radio to the Cube Orange </li>
+        </ul>
+
+        <h3>Physical Assembly</h3>
+        You can now connect the PDB to the rest of the drone. You will use 12 M3 screws to mount the PDB to the top of the arm assembly. Ensure to properly route all wires to avoid pinching.
       </details>
 
       <h2>Conclusion</h2>
       <p>Now that you have a working drone continue to the First Flight page for information on getting it in the air.</p>
     </details>
 
-    <details>
-      <summary>First Flight TODO</summary>
+    <!-- <details>
+      <summary>First Flight</summary>
       <p> TODO: Add instructions for initial calibration, takeoff procedures for first flight</p>
-    </details>
+    </details> -->
 
     <details>
-      <summary>Bill of Materials TODO</summary>
+      <summary>Bill of Materials</summary>
       <style>
         table.bom-table {
           width: 100%;
@@ -255,14 +314,19 @@
       
     </details>
 
-    <details>
+    <!-- <details>
       <summary>Contact Information</summary>
       <p>TODO</p>
-    </details>
+    </details> -->
 
     <details>
       <summary>File Download</summary>
-      <p>TODO</p>
+      <h3>Download Files</h3>
+<p>
+  <a href="Files/PECS UAV CAD (1).zip" download>
+    📦 Download Quadcopter Files (.zip)
+  </a>
+</p>
     </details>
   </main>
 </body>
